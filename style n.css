@@ -1,0 +1,275 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Open+Sans:wght@400;500&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  background-color: #fbfdfd;
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* SIDEBAR */
+.sidebar {
+  width: 220px;
+  background-color: #f8f8f7;
+  border-right: 1px solid #ddd;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 20px;
+  text-align: center;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.sidebar-logo {
+  width: 235px;
+}
+
+.sidebar h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 18px;
+  letter-spacing: 2px;
+  line-height: 1.2;
+  color: #2e4732;
+  margin-bottom: 30px;
+}
+
+.sidebar h1 span {
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.sidebar-footer {
+  font-size: 11px;
+  color: #555;
+  line-height: 1.6;
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  text-align: center;
+}
+
+/* MAIN CONTENT */
+.main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* NAVBAR */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f8f8f7;
+  padding: 20px 40px;
+  letter-spacing: 3px;
+  border-bottom: 1px solid #ddd;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 30px;
+  padding: 5px 10px;
+  background-color: #fff;
+  position: relative;
+  margin-left: 240px; 
+}
+
+.search-bar input {
+  border: none;
+  outline: none;
+  background: none;
+  padding: 5px 8px;
+  width: 180px;
+}
+
+.search-bar button {
+  border: none;
+  background: none;
+  cursor: text;
+}
+
+.search-bar img {
+  height: 16px;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+}
+
+nav ul li {
+  margin-left: 20px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #444;
+  font-weight: 600;
+  transition: color 0.2s;
+  display: flex;
+  align-items: center;
+}
+
+nav ul li a:hover {
+  color: #3e6042;
+}
+
+/* LOGIN SECTION */
+.login-section {
+  background: #2f4833;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-section h2 {
+  color: #fdfdfd;
+  letter-spacing: 2px;
+  margin-bottom: 25px;
+  margin-left: 120px;
+}
+
+.login-container {
+  background: #fff;
+  box-shadow: 0 0 20px rgba(0,0,0,0.1);
+  border-radius: 10px;
+  padding: 40px;
+  max-width: 400px;
+  width: 100%;
+  text-align: center;
+  margin-left: 120px;
+  margin-bottom: 30px;
+}
+
+.avatar {
+  width: 80px;
+  height: 80px;
+  background: url('avatar.png') no-repeat center/cover;
+  border-radius: 50%;
+  margin: 0 auto 15px;
+  background-color: #c9d3c1;
+}
+
+.login-box h3 {
+  margin-bottom: 20px;
+  font-weight: 500;
+  color: #3a533d;
+}
+
+.input-group {
+  margin-bottom: 15px;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.remember {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  margin-bottom: 15px;
+  justify-content: flex-start;
+}
+
+.btn {
+  background-color: #6d8362;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-weight: 600;
+  width: 100%;
+}
+
+.btn:hover {
+  background-color: #59704e;
+}
+
+.forgot {
+  display: block;
+  margin-top: 10px;
+  font-size: 13px;
+  color: #6d8362;
+  text-decoration: none;
+}
+
+.social-login {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.facebook-btn, .google-btn {
+  display: flex;
+  align-items: center;
+  border: none;
+  border-radius: 20px;
+  padding: 8px 15px;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 600;
+  color: #fff;
+}
+
+.facebook-btn {
+  background-color: #59704e;
+}
+
+.google-btn {
+  background-color: #59704e;
+}
+
+.facebook-btn img, .google-btn img {
+  height: 16px;
+  margin-right: 8px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  body {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 20px;
+  }
+
+  .sidebar-footer {
+    display: none;
+  }
+
+  .login-section {
+    background: #f6f3ef;
+    padding: 40px 0;
+  }
+
+  .login-container {
+    width: 90%;
+  }
+}
